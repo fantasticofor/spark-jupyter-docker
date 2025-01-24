@@ -1,4 +1,4 @@
-FROM apache/spark:4.0.0-preview2-scala2.13-java21-ubuntu
+FROM apache/spark:3.5.4-scala2.12-java17-python3-ubuntu
 
 # Switch to root for installations
 USER root
