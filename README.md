@@ -17,7 +17,7 @@ docker build -t spark-jupyter .
 ## Run the Container
 
 ```bash
-docker run -p 8888:8888 -v $(pwd)/workspace:/workspace spark-jupyter
+docker run -p 8888:8888 -v ${PWD}/workspace:/workspace spark-jupyter
 ```
 
 ### Explanation of Flags:
