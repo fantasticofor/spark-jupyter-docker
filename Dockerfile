@@ -8,7 +8,8 @@ RUN set -ex; \
     apt-get update && \
     apt-get install -y python3 python3-pip && \
     rm -rf /var/lib/apt/lists/* && \
-    pip install --no-cache-dir jupyter findspark
+    pip install --no-cache-dir jupyter findspark spylon-kernel && \
+    python3 -m spylon_kernel install
 
 # Switch back to the Spark user for security
 # USER SPARK

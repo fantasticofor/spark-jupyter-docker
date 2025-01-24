@@ -38,8 +38,10 @@ Start coding in the notebook using Python and Spark! 🎉
 # Notes
 
 If you need to install additional Python libraries while the container is running, you can open a terminal in Jupyter or into the container itself and use `pip install <library>`.
-To rebuild the image after changing the Dockerfile, rerun the build command:
+To rebuild the image after changing the Dockerfile, rerun the build command `docker build -t spark-jupyter .`
 
-```bash
-docker build -t spark-jupyter .
-```
+## Alternative to spylon-kernel: Apache Toree Kernel
+
+Apache Toree Kernel, supports Scala and integrates better with Spark.
+To install Toree add this line to your Dockerfile: `RUN pip install --no-cache-dir toree && jupyter toree install --spark_home=/opt/spark`
+Replace `/opt/spark` with your Spark installation directory if it's different.
